@@ -18,7 +18,6 @@ class Node
  
  friend class Tree;
  public:
- 
 
 };
 
@@ -27,6 +26,8 @@ class Tree
  public:
  Tree (void);//constructor
  //destructor?
+ ~Tree (void);
+
  bool IsEmpty();
  
  Node* InsertNode (string parentStr, string childStr);
@@ -36,8 +37,9 @@ class Tree
  private:
  Node* head;
  void visit (Node* node , string bosluk);
- void preorder(Node* tree, int depth);
- void preorder2(Node* tree,string str);
+ void preorder(Node* tree);
+ void preorder(Node* tree,string str);
+ void postOrder (Node* tree);
 };
 
 #endif
