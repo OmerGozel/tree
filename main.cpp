@@ -15,8 +15,9 @@ int main()
 
 	myTree.InsertNode("Motivations", "Avidity!");
         
-        myTree.DisplayTree();	
+        myTree.InsertNode("Methods", "Ponzi Scheme");
         
+        myTree.DisplayTree();	
 
        return 0;
 }

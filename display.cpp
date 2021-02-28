@@ -8,18 +8,15 @@ void preorder(Node* node);
 
 void Tree::DisplayTree ()
 {
-  preorder(head, 0);
+  preorder(head);
 }
-
- int old_depth = 0;
 
 void Tree:: visit (Node* node, string bosluk)
 {
 	cout << bosluk << node -> data << endl;
-
 }
 
-void Tree:: preorder(Node* node, int depth)
+void Tree:: preorder(Node* node)
 {
   static string bosluk = " ";
 
@@ -32,13 +29,13 @@ void Tree:: preorder(Node* node, int depth)
   {
    string temp = bosluk;
    bosluk += "       ";   
-   preorder(child, depth);
+   preorder(child);
   
    bosluk = temp;   
   } 
  if(sibling)  
    {
-     preorder (sibling, depth);
+     preorder (sibling);
    }
   
 }
